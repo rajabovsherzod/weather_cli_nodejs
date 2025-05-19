@@ -1,20 +1,26 @@
 import chalk from "chalk"
 import dedent from "dedent-js"
 const printError = err => {
+    console.log('------------------------------------------')
     console.log(chalk.bgRed("ERROR") + " " + err)
+    console.log('------------------------------------------')
 }
 
 const printSuccess = message => {
+    console.log('------------------------------------------')
     console.log(chalk.bgGreen("SUCCESS") + " " + message)
+    console.log('------------------------------------------')
 }
 
 const printHelp = () => {
+    console.log('------------------------------------------')
     console.log(dedent`
     ${chalk.bold.bgCyan("Command Line Interface")}
     -s [CITY] for install city
     -h for help
     -t [API_KEY] for saving token
     `)
+    console.log('------------------------------------------')
 }
 
 const printWeather = (response, icon) => {
